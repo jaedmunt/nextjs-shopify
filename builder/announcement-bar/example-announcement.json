@@ -31,7 +31,7 @@
         "component": {
           "name": "Text",
           "options": {
-            "text": "<p>Announcement bar section</p>"
+            "text": "Celebrate a white Christmas with 5% off all D, E and F stones. Use code WHITECHRISTMAS at checkout."
           }
         },
         "responsiveStyles": {
