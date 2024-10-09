@@ -3,15 +3,15 @@
   "createdDate": 1618890934748,
   "data": {
     "siteInformation": {
-      "titleTemplate": "%s - Headless Demo",
-      "title": "Builder.io + Next.js + Shopify Demo",
+      "titleTemplate": "%s - Century Diamonds",
+      "title": "Century Diamonds - Yes for a Century",
       "openGraph": {
-        "site_name": "Builder.io + Next.js + Shopify Demo",
+        "site_name": "Century Diamonds - Yes for a Century",
         "locale": "en_IE",
-        "url": "https://github.com/BuilderIO/nextjs-shopify",
+        "url": "https://github.com/jaedmunt",
         "type": "website"
       },
-      "description": "A starter kit demo store for using headless shopify with Builder.io ->  https://github.com/BuilderIO/nextjs-shopify"
+      "description": "Century Diamonds - Yes for a Century"
     },
     "theme": "swiss",
     "colorOverrides": {
@@ -20,7 +20,7 @@
       "primary": "rgba(71, 71, 71, 1)"
     },
     "siteSettings": {
-      "logo": { "text": "Headless" },
+      "logo": { "text": "Century Diamonds" },
       "navigationLinks": [
         { "link": "/faq", "title": "FAQ" },
         { "link": "/about-us", "title": "About us" }
