@@ -6,4 +6,5 @@ export default {
   apiKey: process.env.BUILDER_PUBLIC_KEY,
   productsModel: 'shopify-product',
   collectionsModel: 'shopify-collection',
+  diamondLineup: 'diamond-lineup'
 }

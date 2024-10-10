@@ -20,6 +20,8 @@ import { getLayoutProps } from '@lib/get-layout-props'
 builder.init(builderConfig.apiKey!)
 const builderModel = 'collection-page'
 
+import DiamondLineup from '@components/diamondlineup/DiamondLineup'
+
 export async function getStaticProps({
   params,
   locale,
@@ -74,12 +76,15 @@ export default function Handle({
   return router.isFallback && isLive ? (
     <h1>Loading...</h1>
   ) : (
-    <BuilderComponent
-      key={collection.id}
-      options={{ enrich: true }}
-      model={builderModel}
-      data={{ collection, theme }}
-      content={page}
-    />
+    <>
+      <BuilderComponent
+        key={collection.id}
+        options={{ enrich: true }}
+        model={builderModel}
+        data={{ collection, theme }}
+        content={page}
+      />
+      <DiamondLineup splineUrl="https://prod.spline.design/YPvOKODLW6B9q0Q8/scene.splinecode" />
+    </>
   )
 }
