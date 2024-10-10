@@ -476,7 +476,7 @@
           "onChange": "",
           "hideFromFieldsEditor": false,
           "type": "text",
-          "helperText": "%s is where the page title will be",
+          "helperText": "%s Century Diamonds - Yes for a Century",
           "permissionsRequiredToEdit": "",
           "required": false,
           "advanced": false,
@@ -506,7 +506,7 @@
           "showTemplatePicker": true,
           "disallowRemove": false,
           "type": "text",
-          "defaultValue": "A starter kit demo store for using headless shopify with Builder.io ->  https://github.com/BuilderIO/nextjs-shopify",
+          "defaultValue": "Century Diamonds - Yes for a Century",
           "copyOnAdd": true,
           "hideFromUI": false,
           "onChange": "",
@@ -518,7 +518,7 @@
           "advanced": false,
           "noPhotoPicker": false,
           "hidden": false,
-          "helperText": "Default description text for site pages ( SEO)",
+          "helperText": "Century Diamonds - Yes for a Century",
           "@type": "@builder.io/core:Field",
           "required": false
         },
@@ -544,7 +544,7 @@
           "showTemplatePicker": true,
           "defaultValue": {
             "type": "website",
-            "site_name": "Builder.io + Next.js + Shopify Demo",
+            "site_name": "Century Diamonds - Yes for a Century",
             "locale": "en_IE",
             "url": "https://github.com/BuilderIO/nextjs-shopify"
           },
