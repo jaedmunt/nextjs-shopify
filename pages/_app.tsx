@@ -10,7 +10,8 @@ import '../blocks/ProductGrid/ProductGrid.builder'
 import '../blocks/CollectionView/CollectionView.builder'
 import '../blocks/ProductView/ProductView.builder'
 import '../blocks/CloudinaryImage/CloudinaryImage.builder'
-import '../blocks/DiamondLineup/DiamondLineup.builder'; // Adjust the path as necessary
+import '../blocks/DiamondLineup/DiamondLineup.builder';
+import '../blocks/GIAComponents/GIATool.builder';  
 
 Builder.register('insertMenu', {
   name: 'Shopify Collections Components',
