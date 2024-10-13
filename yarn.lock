@@ -1279,6 +1279,14 @@
     react-merge-refs "2.1.1"
     thumbhash "0.1.1"
 
+"@splinetool/runtime@^1.9.30":
+  version "1.9.30"
+  resolved "https://registry.npmjs.org/@splinetool/runtime/-/runtime-1.9.30.tgz"
+  integrity sha512-kmzUj4Ravf8+WJvMKVyAXcT4VBvDhZ+NtJx+Hp7VxpaFhgmtbYbBifr8W2B6WrGmw8TyvT6SRMuCTKz5YtkCmQ==
+  dependencies:
+    on-change "^4.0.0"
+    semver-compare "^1.0.0"
+
 "@styled-system/background@^5.1.2":
   version "5.1.2"
   resolved "https://registry.npmjs.org/@styled-system/background/-/background-5.1.2.tgz"
@@ -2603,6 +2611,15 @@ duplexer@^0.1.2:
   resolved "https://registry.npmjs.org/duplexer/-/duplexer-0.1.2.tgz"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
 
+dynamic@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.npmjs.org/dynamic/-/dynamic-4.2.2.tgz"
+  integrity sha512-ehc2QCZ/s75ih5jCsVdeGAol9ls+24q5W+O/yYWBz0Y/hL6iANqnUBdaasDyIDt2Kpiaq22PZ8fpJE7kjLjlpQ==
+  dependencies:
+    expression-eval "^1.4.0"
+    jquery "^3.4.1"
+    microdash "~1.3"
+
 electron-to-chromium@^1.4.477:
   version "1.4.520"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.520.tgz"
@@ -2781,6 +2798,13 @@ expect@^29.7.0:
     jest-matcher-utils "^29.7.0"
     jest-message-util "^29.7.0"
     jest-util "^29.7.0"
+
+expression-eval@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/expression-eval/-/expression-eval-1.4.0.tgz"
+  integrity sha512-CvpqG2feKjGcr+6NB/ZOA2csOeVL+2DSiWrF/4h0mrdYv4SxR2vCZhLHSst4Sp+xHtN/LQtPfi6i7K9EJwzRGw==
+  dependencies:
+    jsep "^0.3.0"
 
 fast-equals@^3.0.1:
   version "3.0.3"
@@ -3770,6 +3794,11 @@ jkroso-type@1:
   resolved "https://registry.npmjs.org/jkroso-type/-/jkroso-type-1.1.1.tgz"
   integrity sha512-zZgay+fPG6PgMUrpyFADmQmvLo39+AZa7Gc5pZhev2RhDxwANEq2etwD8d0e6rTg5NkwOIlQmaEmns3draC6Ng==
 
+jquery@^3.4.1:
+  version "3.7.1"
+  resolved "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz"
+  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
+
 js-cookie@3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/js-cookie/-/js-cookie-3.0.1.tgz"
@@ -3787,6 +3816,11 @@ js-yaml@^3.13.1:
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+jsep@^0.3.0:
+  version "0.3.5"
+  resolved "https://registry.npmjs.org/jsep/-/jsep-0.3.5.tgz"
+  integrity sha512-AoRLBDc6JNnKjNcmonituEABS5bcfqDhQAWWXNTFrqu6nVXBpBAGfcoTGZMFlIrh9FjmE1CQyX9CTNwZrXMMDA==
 
 jsesc@^2.5.1:
   version "2.5.2"
@@ -4022,6 +4056,11 @@ micro-memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/micro-memoize/-/micro-memoize-4.1.2.tgz"
   integrity sha512-+HzcV2H+rbSJzApgkj0NdTakkC+bnyeiUxgT6/m7mjcz1CmM22KYFKp+EVj1sWe4UYcnriJr5uqHQD/gMHLD+g==
+
+microdash@~1.3:
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/microdash/-/microdash-1.3.0.tgz"
+  integrity sha512-iQyHLodLERj5U5+AzaFKRL4OlUoFCHGHZbTbAnAhN2Xn8nT7zEMt0lk4hQHmyJZpXKIVO+4BN7d47FBi54G6lg==
 
 micromatch@^4.0.0, micromatch@^4.0.4, micromatch@^4.0.5:
   version "4.0.5"
@@ -4270,6 +4309,11 @@ ofetch@^1.1.1:
     destr "^2.0.1"
     node-fetch-native "^1.4.0"
     ufo "^1.3.0"
+
+on-change@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/on-change/-/on-change-4.0.2.tgz"
+  integrity sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==
 
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
@@ -4966,6 +5010,11 @@ scheduler@^0.23.0:
   integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
   dependencies:
     loose-envify "^1.1.0"
+
+semver-compare@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/semver-compare/-/semver-compare-1.0.0.tgz"
+  integrity sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==
 
 semver@^6.0.0:
   version "6.3.1"

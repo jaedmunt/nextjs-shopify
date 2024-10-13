@@ -1,32 +1,22 @@
-"use client";
+'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
+import dynamic from 'next/dynamic';
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'spline-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { url?: string }, HTMLElement>;
-    }
-  }
-}
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+});
 
 interface DiamondLineupProps {
   splineUrl: string;
 }
 
-export default function DiamondLineup({ splineUrl }: DiamondLineupProps) {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://unpkg.com/@splinetool/viewer/build/spline-viewer.js";
-    script.type = "module";
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
+const DiamondLineup: React.FC<DiamondLineupProps> = ({ splineUrl }) => {
   return (
-    <spline-viewer url={splineUrl}></spline-viewer>
+    <div style={{ width: '100%', height: '600px' }}>
+      <Spline scene={splineUrl} />
+    </div>
   );
-}
+};
+
+export default DiamondLineup;

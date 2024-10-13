@@ -1,6 +1,7 @@
 {
   "name": "nextjs-shopify",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -52,7 +53,7 @@
     "@radix-ui/react-dialog": "^1.0.2",
     "@reach/dialog": "^0.18.0",
     "@reach/portal": "0.14.0",
-    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.30",
     "@theme-ui/components": "0.15.5",
     "@theme-ui/match-media": "0.15.5",
     "@theme-ui/preset-base": "0.15.5",
@@ -60,6 +61,7 @@
     "@types/shopify-buy": "2.10.3",
     "@types/traverse": "0.6.32",
     "cheerio": "1.0.0-rc.12",
+    "dynamic": "^4.2.2",
     "js-cookie": "3.0.1",
     "next": "13.1.6",
     "next-seo": "5.15.0",
@@ -73,6 +75,8 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "13.1.6",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.30",
     "@types/js-cookie": "3.0.3",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",

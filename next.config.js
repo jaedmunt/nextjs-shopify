@@ -1,8 +1,10 @@
-const bundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: !!process.env.BUNDLE_ANALYZE,
-})
+import bundleAnalyzer from '@next/bundle-analyzer';
 
-module.exports = bundleAnalyzer({
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: !!process.env.BUNDLE_ANALYZE,
+});
+
+export default withBundleAnalyzer({
   images: {
     domains: [
       'res.cloudinary.com',
