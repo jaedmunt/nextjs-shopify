@@ -3,11 +3,19 @@
 import React, { FC, useState, useEffect } from 'react'
 import { BuilderComponent, builder } from '@builder.io/react'
 import { useCart } from '@lib/shopify/storefront-data-hooks'
-import { jsx, Box, useThemeUI, Heading, Button } from 'theme-ui'
+import {
+  jsx,
+  Box,
+  Flex,
+  NavLink,
+  useThemeUI,
+  Heading,
+  Button,
+} from 'theme-ui'
+import { keyframes } from '@emotion/react'
 import { useUI } from '@components/common/context'
 import Image from 'next/legacy/image'
 import Searchbar from './Searchbar'
-import Link from '@components/common/Link'
 import { Bag } from '@components/icons'
 
 const Navbar: FC = () => {
@@ -19,7 +27,7 @@ const Navbar: FC = () => {
   useEffect(() => {
     async function fetchContent() {
       const items = cart?.lineItems || []
-      const anouncementContent = await builder
+      const announcementContent = await builder
         .get('announcement-bar', {
           cacheSeconds: 120,
           userAttributes: {
@@ -27,10 +35,23 @@ const Navbar: FC = () => {
           } as any,
         })
         .toPromise()
-      setAnnouncement(anouncementContent)
+      setAnnouncement(announcementContent)
     }
     fetchContent()
   }, [cart?.lineItems])
+
+  // Define the keyframes for the shine effect
+  const shine = keyframes`
+    0% {
+      left: -150%;
+    }
+    50% {
+      left: 50%;
+    }
+    100% {
+      left: 150%;
+    }
+  `
 
   return (
     <React.Fragment>
@@ -52,20 +73,56 @@ const Navbar: FC = () => {
           position: 'relative',
         }}
       >
-        <Box
+        {/* Navigation Links */}
+        <Flex
+          as="nav"
           sx={{
             display: ['none', 'none', 'flex'],
-            flexBasis: 0,
+            flexBasis: 'auto',
             minWidth: 240,
             justifyContent: 'space-evenly',
           }}
         >
           {navigationLinks?.map((link, index) => (
-            <Link key={index} sx={{ padding: 10 }} href={link.link || '//'}>
+            <NavLink
+              key={index}
+              href={link.link || '#!'}
+              sx={{
+                position: 'relative',
+                display: 'inline-block',
+                padding: '15px',
+                paddingRight: '40px',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                color: 'text',
+                textAlign: 'left',
+                overflow: 'hidden',
+                '&:hover': {
+                  color: 'primary',
+                  backgroundColor: 'muted',
+                },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: 0,
+                  left: '-150%',
+                  width: '100%',
+                  height: '100%',
+                  background:
+                    'linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent)',
+                  transform: 'skewX(-25deg)',
+                },
+                '&:hover::before': {
+                  animation: `${shine} 0.75s forwards`,
+                },
+              }}
+            >
               {link.title}
-            </Link>
+            </NavLink>
           ))}
-        </Box>
+        </Flex>
+
+        {/* Logo */}
         <Box
           sx={{
             transform: 'translateX(-50%)',
@@ -80,7 +137,7 @@ const Navbar: FC = () => {
             }}
           >
             {logo && logo.image && (
-              <Link
+              <NavLink
                 href="/"
                 sx={{
                   letterSpacing: -1,
@@ -93,11 +150,11 @@ const Navbar: FC = () => {
                   width={logo.width}
                   height={logo.height}
                   src={logo.image}
-                ></Image>
-              </Link>
+                />
+              </NavLink>
             )}
             {logo && logo.text && !logo.image && (
-              <Link
+              <NavLink
                 href="/"
                 sx={{
                   letterSpacing: -1,
@@ -106,16 +163,19 @@ const Navbar: FC = () => {
                 }}
               >
                 {logo.text}
-              </Link>
+              </NavLink>
             )}
           </Heading>
         </Box>
+
+        {/* Search and Cart */}
         <Box
           sx={{
             display: 'flex',
             minWidth: 140,
             width: '100%',
             justifyContent: ['space-between', 'flex-end'],
+            alignItems: 'center',
           }}
         >
           <Searchbar />
